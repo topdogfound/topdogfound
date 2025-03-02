@@ -259,7 +259,7 @@
             }
             
             .header {
-                padding: 20px;
+                padding: 13px;
             }
             
             .section:not(:last-child) {
@@ -301,6 +301,10 @@
         .section:not(:last-child) {
             margin-bottom: 30px;
         }
+        p {
+            text-align: justify;
+        }
+
     </style>
 </head>
 <body>
@@ -314,57 +318,84 @@
                 title: "Software Development Engineer",
                 location: "Noida, India"
             },
-            summary: "Results-driven Software Developer with expertise in PHP development, specializing in Laravel and the LAMP and MERN stacks. Proven track record of delivering high-quality, scalable web applications with a focus on performance optimization and security. Skilled in designing robust backend systems and implementing complex business logic for financial applications.",
+            summary : "Experienced Software Development Engineer specializing in PHP, Laravel, and the LAMP and MERN stacks. Skilled in building scalable financial applications, optimizing databases, and implementing microservices with Laravel and MongoDB. Proficient in PostgreSQL, MySQL, and Redis, ensuring high-performance data management. Hands-on experience with containerization using Docker, real-time features with Laravel Reverb, and event-driven architecture with Kafka. Passionate about writing clean, testable code using PHP Unit and Pest, and integrating modern authentication with Laravel Socialite.",
             experience: [
                 {
                     company: "Value Research",
                     title: "Software Development Engineer",
-                    period: "2023 - Present",
+                    period: "April 2023 - Present",
                     responsibilities: [
-                        "Led backend development for financial applications, ensuring high availability and scalability.",
-                        "Designed and implemented authentication & authorization using Laravel Jetstream, Laravel Passport, and Socialite.",
-                        "Optimized database queries and implemented caching strategies, resulting in a 40% improvement in application performance.",
-                        "Mentored junior developers and conducted code reviews to maintain code quality and best practices.",
-                        "Collaborated with cross-functional teams to define technical requirements and architecture for new features."
-                    ]
-                }
-            ],
-            projects: [
-                {
-                    name: "Mutual Fund Order Processing System",
-                    details: [
-                        "Built order tracking, transaction handling, and user-friendly UIs with Laravel & jQuery.",
-                        "Implemented real-time notifications using Laravel Echo and WebSockets.",
-                        "Designed a scalable architecture capable of handling thousands of concurrent transactions.",
-                        "Integrated with multiple payment gateways and financial service providers."
+                        "Developed and maintained financial applications using PHP, jQuery, PostgreSQL, apache and Git, ensuring stability and performance.",
+                        "Optimized PostgreSQL queries and indexing, significantly improving data retrieval speed and application efficiency.",
+                        "Transitioned to Laravel and MongoDB to develop microservices, focusing on scalability and modular architecture."
                     ]
                 },
                 {
-                    name: "Chirps (Twitter Clone)",
-                    details: [
-                        "Developed a microblogging platform using Laravel Reverb and React Starter Kit.",
-                        "Implemented real-time features including live notifications and instant messaging.",
-                        "Created a responsive UI with modern design principles and accessibility features.",
-                        "Utilized Redis for caching and Kafka for event streaming to ensure high performance."
+                    "company": "CodeQuotient",
+                    "title": "Software Development Intern",
+                    "period": "December 2022 - March 2023",
+                    "responsibilities": [
+                        "Gained hands-on experience with web development technologies including HTML, CSS, Bootstrap, and JavaScript.",
+                        "Worked on projects using Node.js, React.js, and MongoDB, developing full-stack applications.",
+                        "Explored MySQL and PHP for backend development, learning database management and server-side scripting."
+                    ]
+                }
+
+            ],
+            projects: [
+                {
+                    "name": "Chirps (Twitter Clone)",
+                    "details": [
+                        "Built a microblogging platform using Laravel Reverb and React Starter Kit, learning Laravel deeply.",
+                        "Implemented real-time features including live notifications and instant messaging for seamless user interaction.",
+                        "Integrated authentication with Laravel Socialite for social logins and Pennant for feature flagging.",
+                        // "Utilized Docker and Docker Compose for containerization and deployed using Nginx as a reverse proxy.",
+                        "Implemented Redis for caching and Kafka for event streaming to optimize performance.",
+                        "Gained hands-on experience with PHP Unit and Pest for automated testing, ensuring code reliability."
                     ]
                 }
             ],
             skills: [
                 {
                     category: "Languages & Frameworks",
-                    items: ["PHP (Laravel)", "JS (jQuery, React, Next.js)", "Node.js", "HTML5/CSS3"]
+                    items: [
+                        "C/C++", 
+                        "PHP (Laravel)", 
+                        "Javascript (jQuery, React, Next.js, Node.js)",
+                        "Python (flask, numpy, pandas)"
+                    ]
                 },
                 {
                     category: "Databases",
-                    items: ["MySQL", "PostgreSQL", "MongoDB", "Redis"]
+                    items: [
+                        "MySQL", 
+                        "PostgreSQL", 
+                        "MongoDB", 
+                        "Redis"
+                    ]
                 },
                 {
-                    category: "Tools & Technologies",
-                    items: ["Docker", "Nginx", "Kafka", "Git", "CI/CD Pipelines"]
+                    "category": "Tools & Technologies",
+                    "items": [
+                        "Docker",
+                        "Docker Compose",
+                        "Nginx",
+                        "Kafka",
+                        "Git",
+                        "CI/CD Pipelines"
+                    ]
                 },
                 {
                     category: "Laravel Packages",
-                    items: ["Laravel Jetstream", "Laravel Socialite", "Laravel Echo", "Laravel Horizon", "Laravel Passport", "Laravel Reverb"]
+                    items: [
+                        "Socialite", 
+                        "Echo", 
+                        "Horizon", 
+                        "Passport", 
+                        "Reverb", 
+                        "Pennant",
+                        "Pest"
+                    ]
                 }
             ],
             // certifications: [
@@ -380,24 +411,32 @@
             languages: ["English (Professional)", "Hindi (Native)"],
             contact: [
                 {
-                    type: "email",
-                    icon: "fas fa-envelope",
-                    value: "topdogfound@gmail.com",
-                    link: "mailto:topdogfound@gmail.com"
+                    "type": "mobile",
+                    "icon": "fas fa-phone",
+                    "value": "8580881559",
+                    "link": "tel:8580881559"
                 },
                 {
-                    type: "github",
-                    icon: "fab fa-github",
-                    value: "github.com/topdogfound",
-                    link: "https://github.com/topdogfound"
+                    "type": "email",
+                    "icon": "fas fa-envelope",
+                    "value": "topdogfound@gmail.com",
+                    "link": "mailto:topdogfound@gmail.com"
                 },
                 {
-                    type: "linkedin",
-                    icon: "fab fa-linkedin",
-                    value: "linkedin.com/in/topdogfound",
-                    link: "https://www.linkedin.com/in/topdogfound"
-                }
+                    "type": "github",
+                    "icon": "fab fa-github",
+                    "value": "github.com/topdogfound",
+                    "link": "https://github.com/topdogfound"
+                },
+                {
+                    "type": "linkedin",
+                    "icon": "fab fa-linkedin",
+                    "value": "linkedin.com/in/topdogfound",
+                    "link": "https://www.linkedin.com/in/topdogfound"
+                },
+
             ]
+
         };
 
         // Utility functions
@@ -457,9 +496,9 @@
                 
                 const contactItem = createElement('li', 'contact-item');
                 
-                const contactIcon = createElement('div', 'contact-icon');
-                const icon = createElement('i', contact.icon);
-                contactIcon.appendChild(icon);
+                // const contactIcon = createElement('div', 'contact-icon');
+                // const icon = createElement('i', contact.icon);
+                // contactIcon.appendChild(icon);
                 
                 const contactText = createElement('div', 'contact-text');
                 const link = createElement('a', '', contact.value);
@@ -470,13 +509,14 @@
                 }
                 contactText.appendChild(link);
                 
-                contactItem.appendChild(contactIcon);
+                // contactItem.appendChild(contactIcon);
                 contactItem.appendChild(contactText);
                 contactList.appendChild(contactItem);
             });
             
             return contactList.children.length > 0 ? createSection('Contact Information', contactList, className) : null;
         }
+    
 
         function createExperienceSection() {
             if (!isValidArray(resumeData.experience)) return null;
@@ -553,25 +593,30 @@
                 if (isValidString(skillCategory.category)) {
                     category.appendChild(createElement('div', 'skill-category-title', skillCategory.category));
                 }
-                
-                // const items = createList(skillCategory.items);
-                // if (items) {
-                //     category.appendChild(items);
-                // }
-                
-                // if (category.children.length > 0) {
-                //     skillsContent.appendChild(category);
-                // }
-                 // Create a comma-separated string of skills
-                if (isValidArray(skillCategory.items)) {
-                    const skillsText = skillCategory.items.join(', '); // Join array items with a comma
-                    const skillsElement = createElement('div', 'skills-text', skillsText);
-                    category.appendChild(skillsElement);
-                }
+                if(skillCategory.category === 'Languages & Frameworks'){
+                    const items = createList(skillCategory.items);
+                    if (items) {
+                        category.appendChild(items);
+                    }
+                    
+                    if (category.children.length > 0) {
+                        skillsContent.appendChild(category);
+                    }
+                } else {
+                    //  Create a comma-separated string of skills
+                    if (isValidArray(skillCategory.items)) {
+                        const skillsText = skillCategory.items.join(', '); // Join array items with a comma
+                        const skillsElement = createElement('div', 'skills-text', skillsText);
+                        category.appendChild(skillsElement);
+                    }
 
-                if (category.children.length > 0) {
-                    skillsContent.appendChild(category);
+                    if (category.children.length > 0) {
+                        skillsContent.appendChild(category);
+                    }
                 }
+                
+                
+            
             });
             
             return skillsContent.children.length > 0 ? skillsContent : null;
@@ -679,6 +724,7 @@
                 rightColumn.appendChild(contactDesktop);
             }
             
+            console.log(resumeData);
             const rightSections = [
                 {
                     title: 'Technical Skills',
@@ -690,7 +736,12 @@
                 },
                 {
                     title: 'Languages',
-                    content: createList(resumeData.languages)
+                    // content: createList(resumeData.languages)
+                    content: () => {
+                            const p_tag = document.createElement('p');
+                            p_tag.textContent = resumeData.languages.join(', ');
+                            return p_tag;
+                        }
                 }
             ];
             
