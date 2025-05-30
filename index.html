@@ -1,779 +1,826 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ravikant - Professional Resume</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <style>
-        :root {
-            --primary: #2c3e50;
-            --secondary: #3498db;
-            --accent: #e74c3c;
-            --light: #ecf0f1;
-            --dark: #2c3e50;
-            --text: #333;
-            --text-light: #7f8c8d;
-            --border: #ddd;
-        }
+      :root {
+        --primary: #2c3e50;
+        --secondary: #3498db;
+        --accent: #e74c3c;
+        --light: #ecf0f1;
+        --dark: #2c3e50;
+        --text: #333;
+        --text-light: #7f8c8d;
+        --border: #ddd;
+      }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text);
-            background-color: #f5f5f5;
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: var(--text);
+        background-color: #f5f5f5;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 40px auto;
+        background: white;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .header {
+        background: var(--primary);
+        color: white;
+        padding: 30px 40px;
+      }
+
+      .name {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
+
+      .title {
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: var(--light);
+        margin-bottom: 15px;
+      }
+
+      .location {
+        display: flex;
+        align-items: center;
+        font-size: 0.9rem;
+        color: var(--light);
+      }
+
+      .location i {
+        margin-right: 8px;
+      }
+
+      .main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 30px;
+        padding: 40px;
+      }
+
+      .section {
+        margin-bottom: 30px;
+      }
+
+      .section-title {
+        font-size: 1.4rem;
+        color: var(--primary);
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid var(--secondary);
+        position: relative;
+      }
+
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 50px;
+        height: 2px;
+        background-color: var(--accent);
+      }
+
+      .experience-item,
+      .project-item {
+        margin-bottom: 20px;
+      }
+
+      .company,
+      .project-name {
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: var(--dark);
+        margin-bottom: 5px;
+      }
+
+      .job-title {
+        font-weight: 600;
+        color: var(--secondary);
+        margin-bottom: 8px;
+      }
+
+      .date {
+        font-size: 0.9rem;
+        color: var(--text-light);
+        margin-bottom: 10px;
+      }
+
+      ul {
+        list-style-type: none;
+      }
+
+      ul li {
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 8px;
+      }
+
+      ul li::before {
+        content: "•";
+        color: var(--secondary);
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+      }
+
+      .skill-category {
+        margin-bottom: 15px;
+      }
+
+      .skill-category-title {
+        font-weight: 600;
+        color: var(--dark);
+        margin-bottom: 8px;
+      }
+
+      .contact-list {
+        list-style: none;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      .contact-icon {
+        width: 36px;
+        height: 36px;
+        background-color: var(--primary);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        color: white;
+        flex-shrink: 0;
+      }
+
+      .contact-text {
+        font-size: 0.95rem;
+      }
+
+      .contact-text a {
+        color: var(--text);
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .contact-text a:hover {
+        color: var(--secondary);
+      }
+
+      .summary {
+        line-height: 1.7;
+      }
+
+      .certification-item {
+        background-color: var(--light);
+        padding: 15px;
+        border-radius: 5px;
+        border-left: 3px solid var(--secondary);
+        margin-bottom: 10px;
+      }
+
+      .certification-name {
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+
+      .certification-issuer {
+        font-size: 0.9rem;
+        color: var(--text-light);
+      }
+
+      @media (max-width: 768px) {
+        .main {
+          grid-template-columns: 1fr;
         }
 
         .container {
-            max-width: 900px;
-            margin: 40px auto;
-            background: white;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            overflow: hidden;
+          margin: 0;
+          border-radius: 0;
         }
 
-        .header {
-            background: var(--primary);
-            color: white;
-            padding: 30px 40px;
+        /* Hide contact section in its original position for mobile */
+        .contact-section-desktop {
+          display: none;
         }
 
-        .name {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 5px;
+        /* Show contact section at the bottom for mobile */
+        .contact-section-mobile {
+          display: block;
+        }
+      }
+
+      /* For desktop view */
+      @media (min-width: 769px) {
+        .contact-section-mobile {
+          display: none;
         }
 
-        .title {
-            font-size: 1.2rem;
-            font-weight: 400;
-            color: var(--light);
-            margin-bottom: 15px;
+        .contact-section-desktop {
+          display: block;
+        }
+      }
+
+      @media print {
+        body {
+          background-color: white;
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
         }
 
-        .location {
-            display: flex;
-            align-items: center;
-            font-size: 0.9rem;
-            color: var(--light);
-        }
-
-        .location i {
-            margin-right: 8px;
+        .container {
+          box-shadow: none;
+          margin: 0;
+          max-width: 100%;
         }
 
         .main {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 30px;
-            padding: 40px;
+          padding: 20px;
         }
 
-        .section {
-            margin-bottom: 30px;
+        .header {
+          padding: 13px;
+        }
+
+        .section:not(:last-child) {
+          margin-bottom: 20px;
+        }
+
+        .experience-item:not(:last-child),
+        .project-item:not(:last-child),
+        .skill-category:not(:last-child),
+        .certification-item:not(:last-child) {
+          margin-bottom: 15px;
+        }
+        .skills-text {
+          font-size: 0.95rem;
+          color: var(--text);
+          line-height: 1.6;
         }
 
         .section-title {
-            font-size: 1.4rem;
-            color: var(--primary);
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--secondary);
-            position: relative;
+          margin-bottom: 12px;
+          padding-bottom: 8px;
         }
 
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 50px;
-            height: 2px;
-            background-color: var(--accent);
+        a {
+          text-decoration: none;
+          color: var(--text);
         }
 
-        .experience-item, .project-item {
-            margin-bottom: 20px;
+        /* Hide contact section in its original position for print */
+        .contact-section-desktop {
+          display: none;
         }
 
-        .company, .project-name {
-            font-weight: 600;
-            font-size: 1.1rem;
-            color: var(--dark);
-            margin-bottom: 5px;
+        /* Show contact section at the bottom for print */
+        .contact-section-mobile {
+          display: block;
         }
-
-        .job-title {
-            font-weight: 600;
-            color: var(--secondary);
-            margin-bottom: 8px;
-        }
-
-        .date {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            margin-bottom: 10px;
-        }
-
-        ul {
-            list-style-type: none;
-        }
-
-        ul li {
-            position: relative;
-            padding-left: 20px;
-            margin-bottom: 8px;
-        }
-
-        ul li::before {
-            content: "•";
-            color: var(--secondary);
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
-
-        .skill-category {
-            margin-bottom: 15px;
-        }
-
-        .skill-category-title {
-            font-weight: 600;
-            color: var(--dark);
-            margin-bottom: 8px;
-        }
-
-        .contact-list {
-            list-style: none;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-
-        .contact-icon {
-            width: 36px;
-            height: 36px;
-            background-color: var(--primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-            color: white;
-            flex-shrink: 0;
-        }
-
-        .contact-text {
-            font-size: 0.95rem;
-        }
-
-        .contact-text a {
-            color: var(--text);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .contact-text a:hover {
-            color: var(--secondary);
-        }
-
-        .summary {
-            line-height: 1.7;
-        }
-
-        .certification-item {
-            background-color: var(--light);
-            padding: 15px;
-            border-radius: 5px;
-            border-left: 3px solid var(--secondary);
-            margin-bottom: 10px;
-        }
-
-        .certification-name {
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-
-        .certification-issuer {
-            font-size: 0.9rem;
-            color: var(--text-light);
-        }
-
-        @media (max-width: 768px) {
-            .main {
-                grid-template-columns: 1fr;
-            }
-            
-            .container {
-                margin: 0;
-                border-radius: 0;
-            }
-            
-            /* Hide contact section in its original position for mobile */
-            .contact-section-desktop {
-                display: none;
-            }
-            
-            /* Show contact section at the bottom for mobile */
-            .contact-section-mobile {
-                display: block;
-            }
-        }
-
-        /* For desktop view */
-        @media (min-width: 769px) {
-            .contact-section-mobile {
-                display: none;
-            }
-            
-            .contact-section-desktop {
-                display: block;
-            }
-        }
-
-        @media print {
-            body {
-                background-color: white;
-                -webkit-print-color-adjust: exact !important;
-                print-color-adjust: exact !important;
-            }
-            
-            .container {
-                box-shadow: none;
-                margin: 0;
-                max-width: 100%;
-            }
-            
-            .main {
-                padding: 20px;
-            }
-            
-            .header {
-                padding: 13px;
-            }
-            
-            .section:not(:last-child) {
-                margin-bottom: 20px;
-            }
-
-            .experience-item:not(:last-child),
-            .project-item:not(:last-child),
-            .skill-category:not(:last-child),
-            .certification-item:not(:last-child) {
-                margin-bottom: 15px;
-            }
-            .skills-text {
-                font-size: 0.95rem;
-                color: var(--text);
-                line-height: 1.6;
-            }
-
-            .section-title {
-                margin-bottom: 12px;
-                padding-bottom: 8px;
-            }
-            
-            a {
-                text-decoration: none;
-                color: var(--text);
-            }
-            
-            /* Hide contact section in its original position for print */
-            .contact-section-desktop {
-                display: none;
-            }
-            
-            /* Show contact section at the bottom for print */
-            .contact-section-mobile {
-                display: block;
-            }
-        }
-        .section:not(:last-child) {
-            margin-bottom: 30px;
-        }
-        p {
-            text-align: justify;
-        }
-
+      }
+      .section:not(:last-child) {
+        margin-bottom: 30px;
+      }
+      p {
+        text-align: justify;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div id="resume-container" class="container"></div>
 
     <script>
-        // Resume data structure
-        const resumeData = {
-            personal: {
-                name: "Ravikant",
-                title: "Software Development Engineer",
-                location: "Noida, India"
-            },
-            summary : "Experienced Software Development Engineer specializing in PHP, Laravel, and the LAMP and MERN stacks. Skilled in building scalable financial applications, optimizing databases, and implementing microservices with Laravel and MongoDB. Proficient in PostgreSQL, MySQL, and Redis, ensuring high-performance data management. Hands-on experience with containerization using Docker, real-time features with Laravel Reverb, and event-driven architecture with Kafka. Passionate about writing clean, testable code using PHP Unit and Pest, and integrating modern authentication with Laravel Socialite.",
-            experience: [
-                {
-                    company: "Value Research",
-                    title: "Software Development Engineer",
-                    period: "April 2023 - Present",
-                    responsibilities: [
-                        "Developed and maintained financial applications using PHP, jQuery, PostgreSQL, apache and Git, ensuring stability and performance.",
-                        "Optimized PostgreSQL queries and indexing, significantly improving data retrieval speed and application efficiency.",
-                        "Transitioned to Laravel and MongoDB to develop microservices, focusing on scalability and modular architecture."
-                    ]
-                },
-                {
-                    "company": "CodeQuotient",
-                    "title": "Software Development Intern",
-                    "period": "December 2022 - March 2023",
-                    "responsibilities": [
-                        "Gained hands-on experience with web development technologies including HTML, CSS, Bootstrap, and JavaScript.",
-                        "Worked on projects using Node.js, React.js, and MongoDB, developing full-stack applications.",
-                        "Explored MySQL and PHP for backend development, learning database management and server-side scripting."
-                    ]
-                }
+      // Resume data structure
+      const resumeData = {
+        personal: {
+          name: "Ravikant",
+          title: "Software Development Engineer",
+          location: "Noida, India",
+        },
+        summary:
+          //   "Experienced Software Development Engineer specializing in PHP, Laravel, Nodej and the LAMP and MERN stacks. Skilled in building scalable financial applications, optimizing databases, and implementing microservices with Laravel and MongoDB. Proficient in PostgreSQL, MySQL, and Redis, ensuring high-performance data management. Hands-on experience with containerization using Docker, real-time features with Laravel Reverb, and event-driven architecture with Kafka. Passionate about writing clean, testable code using PHP Unit and Pest, and integrating modern authentication with Laravel Socialite.",
 
+          "Experienced Software Developer with a strong focus on PHP (Laravel), Node.js, and full-stack development using LAMP and MERN stacks. " +
+          "Proven track record in building scalable financial apps, optimizing database performance, and developing microservices with Laravel and MongoDB. " +
+          "Skilled in PostgreSQL, MySQL, and Redis for efficient data handling. " +
+          "Hands-on with Docker for containerization, Kafka for event-driven systems, and Laravel Reverb for real-time features.  " +
+          "Writes clean, testable code using PHPUnit and Pest, and integrates modern auth flows with Laravel Socialite.",
+        experience: [
+          {
+            company: "Value Research",
+            title: "Software Development Engineer",
+            period: "April 2023 - Present",
+            responsibilities: [
+              "Developed and maintained financial applications using PHP, jQuery, PostgreSQL, apache and Git, ensuring stability and performance.",
+              "Optimized PostgreSQL queries and indexing, significantly improving data retrieval speed and application efficiency.",
+              "Transitioned to Laravel and MongoDB to develop microservices, focusing on scalability and modular architecture.",
             ],
-            projects: [
-                {
-                    "name": "Chirps (Twitter Clone)",
-                    "details": [
-                        "Built a microblogging platform using Laravel Reverb and React Starter Kit, learning Laravel deeply.",
-                        "Implemented real-time features including live notifications and instant messaging for seamless user interaction.",
-                        "Integrated authentication with Laravel Socialite for social logins and Pennant for feature flagging.",
-                        // "Utilized Docker and Docker Compose for containerization and deployed using Nginx as a reverse proxy.",
-                        "Implemented Redis for caching and Kafka for event streaming to optimize performance.",
-                        "Gained hands-on experience with PHP Unit and Pest for automated testing, ensuring code reliability."
-                    ]
-                }
+          },
+          {
+            company: "CodeQuotient",
+            title: "Software Development Intern",
+            period: "December 2022 - March 2023",
+            responsibilities: [
+              "Gained hands-on experience with web development technologies including HTML, CSS, Bootstrap, and JavaScript.",
+              "Worked on projects using Node.js, React.js, and MongoDB, developing full-stack applications.",
+              "Explored MySQL and PHP for backend development, learning database management and server-side scripting.",
             ],
-            skills: [
-                {
-                    category: "Languages & Frameworks",
-                    items: [
-                        "C/C++", 
-                        "PHP (Laravel)", 
-                        "Javascript (jQuery, React, Next.js, Node.js)",
-                        "Python (flask, numpy, pandas)"
-                    ]
-                },
-                {
-                    category: "Databases",
-                    items: [
-                        "MySQL", 
-                        "PostgreSQL", 
-                        "MongoDB", 
-                        "Redis"
-                    ]
-                },
-                {
-                    "category": "Tools & Technologies",
-                    "items": [
-                        "Docker",
-                        "Docker Compose",
-                        "Nginx",
-                        "Kafka",
-                        "Git",
-                        "CI/CD Pipelines"
-                    ]
-                },
-                {
-                    category: "Laravel Packages",
-                    items: [
-                        "Socialite", 
-                        "Echo", 
-                        "Horizon", 
-                        "Passport", 
-                        "Reverb", 
-                        "Pennant",
-                        "Pest"
-                    ]
-                }
+          },
+        ],
+        projects: [
+          {
+            name: "Chirps (Twitter Clone)",
+            details: [
+              "Built a microblogging platform using Laravel Reverb and React Starter Kit, learning Laravel deeply.",
+              "Implemented real-time features including live notifications and instant messaging for seamless user interaction.",
+              "Integrated authentication with Laravel Socialite for social logins and Pennant for feature flagging.",
+              // "Utilized Docker and Docker Compose for containerization and deployed using Nginx as a reverse proxy.",
+              "Implemented Redis for caching and Kafka for event streaming to optimize performance.",
+              "Gained hands-on experience with PHP Unit and Pest for automated testing, ensuring code reliability.",
             ],
-            // certifications: [
-            //     {
-            //         name: "Laravel Certified Developer",
-            //         issuer: "Laravel.com"
-            //     },
-            //     {
-            //         name: "AWS Certified Developer",
-            //         issuer: "Amazon Web Services"
-            //     }
-            // ],
-            languages: ["English (Professional)", "Hindi (Native)"],
-            contact: [
-                {
-                    "type": "mobile",
-                    "icon": "fas fa-phone",
-                    "value": "8580881559",
-                    "link": "tel:8580881559"
-                },
-                {
-                    "type": "email",
-                    "icon": "fas fa-envelope",
-                    "value": "topdogfound@gmail.com",
-                    "link": "mailto:topdogfound@gmail.com"
-                },
-                {
-                    "type": "github",
-                    "icon": "fab fa-github",
-                    "value": "github.com/topdogfound",
-                    "link": "https://github.com/topdogfound"
-                },
-                {
-                    "type": "linkedin",
-                    "icon": "fab fa-linkedin",
-                    "value": "linkedin.com/in/topdogfound",
-                    "link": "https://www.linkedin.com/in/topdogfound"
-                },
+          },
+          {
+            name: "Movie Review Application",
+            details: [
+              "Developed a full-stack movie review platform using Laravel, React, Inertia.js, and MongoDB.",
+              "Used ShadCN UI components to design a modern, accessible, and responsive user interface.",
+              "Enabled user-authenticated reviews, ratings, and dynamic filtering with seamless SPA experience via Inertia.js.",
+              "Structured data storage with MongoDB for flexible and fast content retrieval.",
+              "Implemented component-level testing and route validation to ensure application robustness.",
+              "Avialable at: https://topdogfound.online/"
+            ],
+          },
+        ],
+        skills: [
+          {
+            category: "Programming Languages",
+            items: ["C/C++", "PHP", "JavaScript", "Python"],
+          },
+          {
+            category: "Backend Frameworks & Runtimes",
+            items: ["Laravel", "Node.js (Express, Socket.io)", "Flask"],
+          },
+          {
+            category: "Frontend Frameworks & Libraries",
+            items: ["React", "Next.js", "jQuery"],
+          },
+          {
+            category: "Databases & Caching",
+            items: ["MySQL", "PostgreSQL", "MongoDB", "Redis"],
+          },
+          {
+            category: "DevOps & Infrastructure",
+            items: ["Docker", "Docker Compose", "Nginx", "Git"],
+          },
+          {
+            category: "Laravel Ecosystem",
+            items: [
+              "Socialite",
+              "Echo",
+              "Horizon",
+              "Passport",
+              "Reverb",
+              "Pennant",
+              "Pest",
+            ],
+          },
+        ],
+        // certifications: [
+        //     {
+        //         name: "Laravel Certified Developer",
+        //         issuer: "Laravel.com"
+        //     },
+        //     {
+        //         name: "AWS Certified Developer",
+        //         issuer: "Amazon Web Services"
+        //     }
+        // ],
+        languages: ["English (Professional)", "Hindi (Native)"],
+        contact: [
+          {
+            type: "mobile",
+            icon: "fas fa-phone",
+            value: "8580881559",
+            link: "tel:8580881559",
+          },
+          {
+            type: "email",
+            icon: "fas fa-envelope",
+            value: "topdogfound@gmail.com",
+            link: "mailto:topdogfound@gmail.com",
+          },
+          {
+            type: "github",
+            icon: "fab fa-github",
+            value: "github.com/topdogfound",
+            link: "https://github.com/topdogfound",
+          },
+          {
+            type: "linkedin",
+            icon: "fab fa-linkedin",
+            value: "linkedin.com/in/topdogfound",
+            link: "https://www.linkedin.com/in/topdogfound",
+          },
+        ],
+      };
 
-            ]
+      // Utility functions
+      const isValidArray = (arr) => Array.isArray(arr) && arr.length > 0;
+      const isValidObject = (obj) =>
+        obj && typeof obj === "object" && Object.keys(obj).length > 0;
+      const isValidString = (str) =>
+        str && typeof str === "string" && str.trim().length > 0;
 
-        };
+      function createElement(tag, className, textContent) {
+        const element = document.createElement(tag);
+        if (className) element.className = className;
+        if (textContent) element.textContent = textContent;
+        return element;
+      }
 
-        // Utility functions
-        const isValidArray = arr => Array.isArray(arr) && arr.length > 0;
-        const isValidObject = obj => obj && typeof obj === 'object' && Object.keys(obj).length > 0;
-        const isValidString = str => str && typeof str === 'string' && str.trim().length > 0;
+      function createSection(title, content, additionalClass = "") {
+        if (!content) return null;
 
-        function createElement(tag, className, textContent) {
-            const element = document.createElement(tag);
-            if (className) element.className = className;
-            if (textContent) element.textContent = textContent;
-            return element;
-        }
+        const section = createElement("section", `section ${additionalClass}`);
+        const sectionTitle = createElement("h3", "section-title", title);
+        section.appendChild(sectionTitle);
 
-        function createSection(title, content, additionalClass = '') {
-            if (!content) return null;
-            
-            const section = createElement('section', `section ${additionalClass}`);
-            const sectionTitle = createElement('h3', 'section-title', title);
-            section.appendChild(sectionTitle);
-            
-            if (typeof content === 'function') {
-                const sectionContent = content();
-                if (sectionContent) {
-                    section.appendChild(sectionContent);
-                } else {
-                    return null;
-                }
-            } else {
-                section.appendChild(content);
-            }
-            
-            return section;
-        }
-
-        function createList(items) {
-            if (!isValidArray(items)) return null;
-            
-            const ul = createElement('ul');
-            items.forEach(item => {
-                if (isValidString(item)) {
-                    const li = createElement('li', '', item);
-                    ul.appendChild(li);
-                }
-            });
-            
-            return ul.children.length > 0 ? ul : null;
-        }
-
-        function createContactSection(className) {
-            if (!isValidArray(resumeData.contact)) return null;
-            
-            const contactList = createElement('ul', 'contact-list');
-            
-            resumeData.contact.forEach(contact => {
-                if (!isValidObject(contact) || !contact.icon || !contact.value || !contact.link) return;
-                
-                const contactItem = createElement('li', 'contact-item');
-                
-                // const contactIcon = createElement('div', 'contact-icon');
-                // const icon = createElement('i', contact.icon);
-                // contactIcon.appendChild(icon);
-                
-                const contactText = createElement('div', 'contact-text');
-                const link = createElement('a', '', contact.value);
-                link.href = contact.link;
-                if (!contact.link.startsWith('mailto:')) {
-                    link.target = "_blank";
-                    link.rel = "noopener noreferrer";
-                }
-                contactText.appendChild(link);
-                
-                // contactItem.appendChild(contactIcon);
-                contactItem.appendChild(contactText);
-                contactList.appendChild(contactItem);
-            });
-            
-            return contactList.children.length > 0 ? createSection('Contact Information', contactList, className) : null;
-        }
-    
-
-        function createExperienceSection() {
-            if (!isValidArray(resumeData.experience)) return null;
-            
-            const experienceContent = createElement('div');
-            
-            resumeData.experience.forEach(exp => {
-                if (!isValidObject(exp)) return;
-                
-                const expItem = createElement('div', 'experience-item');
-                
-                if (isValidString(exp.company)) {
-                    expItem.appendChild(createElement('div', 'company', exp.company));
-                }
-                
-                if (isValidString(exp.title)) {
-                    expItem.appendChild(createElement('div', 'job-title', exp.title));
-                }
-                
-                if (isValidString(exp.period)) {
-                    expItem.appendChild(createElement('div', 'date', exp.period));
-                }
-                
-                const responsibilities = createList(exp.responsibilities);
-                if (responsibilities) {
-                    expItem.appendChild(responsibilities);
-                }
-                
-                if (expItem.children.length > 0) {
-                    experienceContent.appendChild(expItem);
-                }
-            });
-            
-            return experienceContent.children.length > 0 ? experienceContent : null;
-        }
-
-        function createProjectsSection() {
-            if (!isValidArray(resumeData.projects)) return null;
-            
-            const projectsContent = createElement('div');
-            
-            resumeData.projects.forEach(project => {
-                if (!isValidObject(project)) return;
-                
-                const projectItem = createElement('div', 'project-item');
-                
-                if (isValidString(project.name)) {
-                    projectItem.appendChild(createElement('div', 'project-name', project.name));
-                }
-                
-                const details = createList(project.details);
-                if (details) {
-                    projectItem.appendChild(details);
-                }
-                
-                if (projectItem.children.length > 0) {
-                    projectsContent.appendChild(projectItem);
-                }
-            });
-            
-            return projectsContent.children.length > 0 ? projectsContent : null;
-        }
-
-        function createSkillsSection() {
-            if (!isValidArray(resumeData.skills)) return null;
-            
-            const skillsContent = createElement('div');
-            
-            resumeData.skills.forEach(skillCategory => {
-                if (!isValidObject(skillCategory)) return;
-                
-                const category = createElement('div', 'skill-category');
-                
-                if (isValidString(skillCategory.category)) {
-                    category.appendChild(createElement('div', 'skill-category-title', skillCategory.category));
-                }
-                if(skillCategory.category === 'Languages & Frameworks'){
-                    const items = createList(skillCategory.items);
-                    if (items) {
-                        category.appendChild(items);
-                    }
-                    
-                    if (category.children.length > 0) {
-                        skillsContent.appendChild(category);
-                    }
-                } else {
-                    //  Create a comma-separated string of skills
-                    if (isValidArray(skillCategory.items)) {
-                        const skillsText = skillCategory.items.join(', '); // Join array items with a comma
-                        const skillsElement = createElement('div', 'skills-text', skillsText);
-                        category.appendChild(skillsElement);
-                    }
-
-                    if (category.children.length > 0) {
-                        skillsContent.appendChild(category);
-                    }
-                }
-                
-                
-            
-            });
-            
-            return skillsContent.children.length > 0 ? skillsContent : null;
-        }
-
-        function createCertificationsSection() {
-            if (!isValidArray(resumeData.certifications)) return null;
-            
-            const certificationsContent = createElement('div', 'certifications-list');
-            
-            resumeData.certifications.forEach(cert => {
-                if (!isValidObject(cert)) return;
-                
-                const certItem = createElement('div', 'certification-item');
-                
-                if (isValidString(cert.name)) {
-                    certItem.appendChild(createElement('div', 'certification-name', cert.name));
-                }
-                
-                if (isValidString(cert.issuer)) {
-                    certItem.appendChild(createElement('div', 'certification-issuer', cert.issuer));
-                }
-                
-                if (certItem.children.length > 0) {
-                    certificationsContent.appendChild(certItem);
-                }
-            });
-            
-            return certificationsContent.children.length > 0 ? certificationsContent : null;
-        }
-
-        function createHeader() {
-            if (!isValidObject(resumeData.personal)) return null;
-            
-            const header = createElement('header', 'header');
-            const headerContent = createElement('div', 'header-content');
-            
-            if (isValidString(resumeData.personal.name)) {
-                headerContent.appendChild(createElement('h1', 'name', resumeData.personal.name));
-            }
-            
-            if (isValidString(resumeData.personal.title)) {
-                headerContent.appendChild(createElement('h2', 'title', resumeData.personal.title));
-            }
-            
-            if (isValidString(resumeData.personal.location)) {
-                const location = createElement('div', 'location');
-                const locationIcon = createElement('i', 'fas fa-map-marker-alt');
-                const locationText = createElement('span', '', resumeData.personal.location);
-                
-                location.appendChild(locationIcon);
-                location.appendChild(locationText);
-                headerContent.appendChild(location);
-            }
-            
-            if (headerContent.children.length > 0) {
-                header.appendChild(headerContent);
-                return header;
-            }
-            
+        if (typeof content === "function") {
+          const sectionContent = content();
+          if (sectionContent) {
+            section.appendChild(sectionContent);
+          } else {
             return null;
+          }
+        } else {
+          section.appendChild(content);
         }
 
-        function buildResume() {
-            const container = document.getElementById('resume-container');
-            if (!container) return;
-            
-            // Create header
-            const header = createHeader();
-            if (header) {
-                container.appendChild(header);
+        return section;
+      }
+
+      function createList(items) {
+        if (!isValidArray(items)) return null;
+
+        const ul = createElement("ul");
+        items.forEach((item) => {
+          if (isValidString(item)) {
+            const li = createElement("li", "", item);
+            ul.appendChild(li);
+          }
+        });
+
+        return ul.children.length > 0 ? ul : null;
+      }
+
+      function createContactSection(className) {
+        if (!isValidArray(resumeData.contact)) return null;
+
+        const contactList = createElement("ul", "contact-list");
+
+        resumeData.contact.forEach((contact) => {
+          if (
+            !isValidObject(contact) ||
+            !contact.icon ||
+            !contact.value ||
+            !contact.link
+          )
+            return;
+
+          const contactItem = createElement("li", "contact-item");
+
+          // const contactIcon = createElement('div', 'contact-icon');
+          // const icon = createElement('i', contact.icon);
+          // contactIcon.appendChild(icon);
+
+          const contactText = createElement("div", "contact-text");
+          const link = createElement("a", "", contact.value);
+          link.href = contact.link;
+          if (!contact.link.startsWith("mailto:")) {
+            link.target = "_blank";
+            link.rel = "noopener noreferrer";
+          }
+          contactText.appendChild(link);
+
+          // contactItem.appendChild(contactIcon);
+          contactItem.appendChild(contactText);
+          contactList.appendChild(contactItem);
+        });
+
+        return contactList.children.length > 0
+          ? createSection("Contact Information", contactList, className)
+          : null;
+      }
+
+      function createExperienceSection() {
+        if (!isValidArray(resumeData.experience)) return null;
+
+        const experienceContent = createElement("div");
+
+        resumeData.experience.forEach((exp) => {
+          if (!isValidObject(exp)) return;
+
+          const expItem = createElement("div", "experience-item");
+
+          if (isValidString(exp.company)) {
+            expItem.appendChild(createElement("div", "company", exp.company));
+          }
+
+          if (isValidString(exp.title)) {
+            expItem.appendChild(createElement("div", "job-title", exp.title));
+          }
+
+          if (isValidString(exp.period)) {
+            expItem.appendChild(createElement("div", "date", exp.period));
+          }
+
+          const responsibilities = createList(exp.responsibilities);
+          if (responsibilities) {
+            expItem.appendChild(responsibilities);
+          }
+
+          if (expItem.children.length > 0) {
+            experienceContent.appendChild(expItem);
+          }
+        });
+
+        return experienceContent.children.length > 0 ? experienceContent : null;
+      }
+
+      function createProjectsSection() {
+        if (!isValidArray(resumeData.projects)) return null;
+
+        const projectsContent = createElement("div");
+
+        resumeData.projects.forEach((project) => {
+          if (!isValidObject(project)) return;
+
+          const projectItem = createElement("div", "project-item");
+
+          if (isValidString(project.name)) {
+            projectItem.appendChild(
+              createElement("div", "project-name", project.name)
+            );
+          }
+
+          const details = createList(project.details);
+          if (details) {
+            projectItem.appendChild(details);
+          }
+
+          if (projectItem.children.length > 0) {
+            projectsContent.appendChild(projectItem);
+          }
+        });
+
+        return projectsContent.children.length > 0 ? projectsContent : null;
+      }
+
+      function createSkillsSection() {
+        if (!isValidArray(resumeData.skills)) return null;
+
+        const skillsContent = createElement("div");
+
+        resumeData.skills.forEach((skillCategory) => {
+          if (!isValidObject(skillCategory)) return;
+
+          const category = createElement("div", "skill-category");
+
+          if (isValidString(skillCategory.category)) {
+            category.appendChild(
+              createElement(
+                "div",
+                "skill-category-title",
+                skillCategory.category
+              )
+            );
+          }
+          if (skillCategory.category === "Languages & Frameworks") {
+            const items = createList(skillCategory.items);
+            if (items) {
+              category.appendChild(items);
             }
-            
-            // Create main content
-            const main = createElement('main', 'main');
-            const leftColumn = createElement('div', 'left-column');
-            const rightColumn = createElement('div', 'right-column');
-            
-            // Left column sections
-            const sections = [
-                {
-                    title: 'Professional Summary',
-                    content: isValidString(resumeData.summary) ? createElement('p', 'summary', resumeData.summary) : null
-                },
-                {
-                    title: 'Work Experience',
-                    content: () => createExperienceSection()
-                },
-                {
-                    title: 'Projects & Contributions',
-                    content: () => createProjectsSection()
-                }
-            ];
-            
-            sections.forEach(({ title, content }) => {
-                const section = createSection(title, content);
-                if (section) {
-                    leftColumn.appendChild(section);
-                }
-            });
-            
-            // Right column sections
-            const contactDesktop = createContactSection('contact-section-desktop');
-            if (contactDesktop) {
-                rightColumn.appendChild(contactDesktop);
+
+            if (category.children.length > 0) {
+              skillsContent.appendChild(category);
             }
-            
-            console.log(resumeData);
-            const rightSections = [
-                {
-                    title: 'Technical Skills',
-                    content: () => createSkillsSection()
-                },
-                {
-                    title: 'Certifications',
-                    content: () => createCertificationsSection()
-                },
-                {
-                    title: 'Languages',
-                    // content: createList(resumeData.languages)
-                    content: () => {
-                            const p_tag = document.createElement('p');
-                            p_tag.textContent = resumeData.languages.join(', ');
-                            return p_tag;
-                        }
-                }
-            ];
-            
-            rightSections.forEach(({ title, content }) => {
-                const section = createSection(title, content);
-                if (section) {
-                    rightColumn.appendChild(section);
-                }
-            });
-            
-            const contactMobile = createContactSection('contact-section-mobile');
-            if (contactMobile) {
-                rightColumn.appendChild(contactMobile);
+          } else {
+            //  Create a comma-separated string of skills
+            if (isValidArray(skillCategory.items)) {
+              const skillsText = skillCategory.items.join(", "); // Join array items with a comma
+              const skillsElement = createElement(
+                "div",
+                "skills-text",
+                skillsText
+              );
+              category.appendChild(skillsElement);
             }
-            
-            // Append columns only if they have content
-            if (leftColumn.children.length > 0) {
-                main.appendChild(leftColumn);
+
+            if (category.children.length > 0) {
+              skillsContent.appendChild(category);
             }
-            
-            if (rightColumn.children.length > 0) {
-                main.appendChild(rightColumn);
-            }
-            
-            // Append main only if it has content
-            if (main.children.length > 0) {
-                container.appendChild(main);
-            }
+          }
+        });
+
+        return skillsContent.children.length > 0 ? skillsContent : null;
+      }
+
+      function createCertificationsSection() {
+        if (!isValidArray(resumeData.certifications)) return null;
+
+        const certificationsContent = createElement(
+          "div",
+          "certifications-list"
+        );
+
+        resumeData.certifications.forEach((cert) => {
+          if (!isValidObject(cert)) return;
+
+          const certItem = createElement("div", "certification-item");
+
+          if (isValidString(cert.name)) {
+            certItem.appendChild(
+              createElement("div", "certification-name", cert.name)
+            );
+          }
+
+          if (isValidString(cert.issuer)) {
+            certItem.appendChild(
+              createElement("div", "certification-issuer", cert.issuer)
+            );
+          }
+
+          if (certItem.children.length > 0) {
+            certificationsContent.appendChild(certItem);
+          }
+        });
+
+        return certificationsContent.children.length > 0
+          ? certificationsContent
+          : null;
+      }
+
+      function createHeader() {
+        if (!isValidObject(resumeData.personal)) return null;
+
+        const header = createElement("header", "header");
+        const headerContent = createElement("div", "header-content");
+
+        if (isValidString(resumeData.personal.name)) {
+          headerContent.appendChild(
+            createElement("h1", "name", resumeData.personal.name)
+          );
         }
 
-        // Build the resume when the page loads
-        document.addEventListener('DOMContentLoaded', buildResume);
+        if (isValidString(resumeData.personal.title)) {
+          headerContent.appendChild(
+            createElement("h2", "title", resumeData.personal.title)
+          );
+        }
+
+        if (isValidString(resumeData.personal.location)) {
+          const location = createElement("div", "location");
+          const locationIcon = createElement("i", "fas fa-map-marker-alt");
+          const locationText = createElement(
+            "span",
+            "",
+            resumeData.personal.location
+          );
+
+          location.appendChild(locationIcon);
+          location.appendChild(locationText);
+          headerContent.appendChild(location);
+        }
+
+        if (headerContent.children.length > 0) {
+          header.appendChild(headerContent);
+          return header;
+        }
+
+        return null;
+      }
+
+      function buildResume() {
+        const container = document.getElementById("resume-container");
+        if (!container) return;
+
+        // Create header
+        const header = createHeader();
+        if (header) {
+          container.appendChild(header);
+        }
+
+        // Create main content
+        const main = createElement("main", "main");
+        const leftColumn = createElement("div", "left-column");
+        const rightColumn = createElement("div", "right-column");
+
+        // Left column sections
+        const sections = [
+          {
+            title: "Professional Summary",
+            content: isValidString(resumeData.summary)
+              ? createElement("p", "summary", resumeData.summary)
+              : null,
+          },
+          {
+            title: "Work Experience",
+            content: () => createExperienceSection(),
+          },
+          {
+            title: "Projects & Contributions",
+            content: () => createProjectsSection(),
+          },
+        ];
+
+        sections.forEach(({ title, content }) => {
+          const section = createSection(title, content);
+          if (section) {
+            leftColumn.appendChild(section);
+          }
+        });
+
+        // Right column sections
+        const contactDesktop = createContactSection("contact-section-desktop");
+        if (contactDesktop) {
+          rightColumn.appendChild(contactDesktop);
+        }
+
+        console.log(resumeData);
+        const rightSections = [
+          {
+            title: "Technical Skills",
+            content: () => createSkillsSection(),
+          },
+          {
+            title: "Certifications",
+            content: () => createCertificationsSection(),
+          },
+          {
+            title: "Languages",
+            // content: createList(resumeData.languages)
+            content: () => {
+              const p_tag = document.createElement("p");
+              p_tag.textContent = resumeData.languages.join(", ");
+              return p_tag;
+            },
+          },
+        ];
+
+        rightSections.forEach(({ title, content }) => {
+          const section = createSection(title, content);
+          if (section) {
+            rightColumn.appendChild(section);
+          }
+        });
+
+        const contactMobile = createContactSection("contact-section-mobile");
+        if (contactMobile) {
+          rightColumn.appendChild(contactMobile);
+        }
+
+        // Append columns only if they have content
+        if (leftColumn.children.length > 0) {
+          main.appendChild(leftColumn);
+        }
+
+        if (rightColumn.children.length > 0) {
+          main.appendChild(rightColumn);
+        }
+
+        // Append main only if it has content
+        if (main.children.length > 0) {
+          container.appendChild(main);
+        }
+      }
+
+      // Build the resume when the page loads
+      document.addEventListener("DOMContentLoaded", buildResume);
     </script>
-</body>
+  </body>
 </html>
