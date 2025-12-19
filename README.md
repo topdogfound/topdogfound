@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Ravi Kant</h1>
-<h3 align="center">Software Developer</h3>
+<h3 align="center">Backend Developer</h3>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Laravel-red?style=flat&logo=laravel&logoColor=white" />
