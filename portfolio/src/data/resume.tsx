@@ -136,7 +136,7 @@ export const DATA = {
       dates: "2026",
       active: true,
       description:
-        "VoiceFlow is an offline-first voice dictation app that converts speech into polished text using the browser’s native Web Speech API and a fully rule-based grammar engine. It runs entirely in the browser with zero AI APIs, zero network calls, and complete privacy. Designed for speed, clarity, and accessibility, VoiceFlow helps users dictate naturally and refine text instantly.",
+        "VoiceFlow is an offline-first voice dictation app that converts speech into polished text using the browser’s native Web Speech API and a fully rule-based grammar engine. It runs entirely in the browser with zero AI APIs, zero network calls, and complete privacy.",
       technologies: [
         "Next.js",
         "TypeScript",
@@ -158,6 +158,34 @@ export const DATA = {
         },
       ],
       image: "/copyzen.png",
+      video: "",
+    }, 
+    {
+      title: "Playground",
+      href: "https://topdogfounds-plaground.vercel.app/", // replace if different
+      dates: "2026",
+      active: true,
+      description:
+        "An experimental web playground to test and showcase interactive browser features built with Next.js, React, and TypeScript—focused on modern UI patterns, component experimentation, and rapid prototyping of frontend ideas.",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Web Speech API",
+        "Tailwind CSS"
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://topdogfounds-plaground.vercel.app/", // or GitHub if repo-only
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "GitHub",
+          href: "https://github.com/topdogfound/playground",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/playground.png",
       video: "",
     }
   ]
