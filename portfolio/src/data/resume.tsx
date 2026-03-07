@@ -18,7 +18,7 @@ export const DATA = {
   initials: "RK",
   url: "https://topdogfound.vercel.app",
   location: "Rohru, Shimla, Himachal Pradesh, India",
-  locationLink: "https://www.google.com/maps/place/sanfrancisco",
+  locationLink: "https://www.google.com/maps/place/Rohru,+Himachal+Pradesh",
   description:
     "Software Developer building scalable, real-world products across backend and frontend. Very active on github.",
   summary:
@@ -35,11 +35,11 @@ export const DATA = {
     { name: "Docker", icon: Docker },
     { name: "Kubernetes", icon: Kubernetes },
     { name: "Java", icon: Java },
-    { name: "C++", icon: Csharp },
+    { name: "C#", icon: Csharp },
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/blog", icon: NotebookIcon, label: "Blog" },
+    { href: "/blogs", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
     email: "ravikantdev@hotmail.com",
@@ -161,31 +161,27 @@ export const DATA = {
       video: "",
     }, 
     {
-      title: "Playground",
-      href: "https://topdogfounds-plaground.vercel.app/", // replace if different
+      title: "Pickly",
+      href: "https://pickly-xi.vercel.app/", // replace if different
       dates: "2026",
       active: true,
       description:
-        "An experimental web playground to test and showcase interactive browser features built with Next.js, React, and TypeScript—focused on modern UI patterns, component experimentation, and rapid prototyping of frontend ideas.",
+        "Building a shared home for practical farming knowledge. We are focused on making farming knowledge and access easy, centralized, and useful in day-to-day field work. Pickly helps farmers and teams discover crop information quickly and use simple tools that support better decisions.",
       technologies: [
         "Next.js",
         "TypeScript",
-        "Web Speech API",
-        "Tailwind CSS"
+        "Drizzle ORM",
+        "Better Auth",
+        "Tan Stack Qury"
       ],
       links: [
         {
           type: "Website",
-          href: "https://topdogfounds-plaground.vercel.app/", // or GitHub if repo-only
+          href: "https://pickly-xi.vercel.app/", // or GitHub if repo-only
           icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "GitHub",
-          href: "https://github.com/topdogfound/playground",
-          icon: <Icons.github className="size-3" />,
-        },
+        }
       ],
-      image: "/playground.png",
+      image: "/pickly-image.png",
       video: "",
     }
   ]

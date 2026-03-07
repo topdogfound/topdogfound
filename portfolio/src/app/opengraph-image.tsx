@@ -1,4 +1,3 @@
- 
 import { ImageResponse } from "next/og";
 import { DATA } from "@/data/resume";
 
@@ -168,5 +167,3 @@ export default async function Image() {
         );
     }
 }
-
-
