@@ -18,20 +18,26 @@ export function BlogSidebar({
   headings,
 }: BlogSidebarProps) {
   return (
-    <aside className="space-y-4 lg:sticky lg:top-8">
+    <aside className="grid gap-4 sm:grid-cols-2 lg:sticky lg:top-8 lg:block lg:space-y-4">
       <BlogAuthorCard name={authorName} role={authorRole} avatar={authorAvatar} />
-      <BlogTableOfContents headings={headings} />
-      <Card className="border border-border/80">
-        <CardHeader className="pb-2">
-          <CardTitle className="text-base font-semibold">Build Better Interfaces</CardTitle>
+      {headings.length > 0 && (
+        <div className="sm:col-span-2 lg:col-span-1">
+          <BlogTableOfContents headings={headings} />
+        </div>
+      )}
+      <Card className="border border-border/80 p-4 sm:p-5 lg:p-4">
+        <CardHeader className="mb-4">
+          <CardTitle className="text-base font-semibold leading-tight">
+            Build Better Interfaces
+          </CardTitle>
         </CardHeader>
-        <CardContent className="space-y-3">
-          <p className="text-sm text-muted-foreground">
+        <CardContent className="space-y-4">
+          <p className="text-sm leading-relaxed text-muted-foreground">
             Explore modern UI patterns and practical design-system workflows for production apps.
           </p>
           <Link
             href="/"
-            className="inline-flex text-sm font-medium text-primary underline underline-offset-4"
+            className="inline-flex text-sm font-medium leading-none text-primary underline underline-offset-4"
           >
             Visit portfolio
           </Link>
