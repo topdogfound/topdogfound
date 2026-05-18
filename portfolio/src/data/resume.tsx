@@ -5,13 +5,40 @@ import { ReactLight } from "@/components/ui/svgs/reactLight";
 import { NextjsIconDark } from "@/components/ui/svgs/nextjsIconDark";
 import { Typescript } from "@/components/ui/svgs/typescript";
 import { Nodejs } from "@/components/ui/svgs/nodejs";
-import { Python } from "@/components/ui/svgs/python";
-import { Golang } from "@/components/ui/svgs/golang";
 import { Postgresql } from "@/components/ui/svgs/postgresql";
 import { Docker } from "@/components/ui/svgs/docker";
-import { Kubernetes } from "@/components/ui/svgs/kubernetes";
-import { Java } from "@/components/ui/svgs/java";
-import { Csharp } from "@/components/ui/svgs/csharp";
+
+const createTextIcon =
+  (label: string, fill: string, textFill = "#ffffff") =>
+  (props: React.SVGProps<SVGSVGElement>) => (
+    <svg viewBox="0 0 24 24" role="img" aria-label={label} {...props}>
+      <rect width="24" height="24" rx="5" fill={fill} />
+      <text
+        x="12"
+        y="15"
+        textAnchor="middle"
+        fill={textFill}
+        fontSize="8"
+        fontWeight="700"
+        fontFamily="Arial, sans-serif"
+      >
+        {label}
+      </text>
+    </svg>
+  );
+
+const LaravelIcon = createTextIcon("Lv", "#ff2d20");
+const PhpIcon = createTextIcon("PHP", "#777bb4");
+const NestjsIcon = createTextIcon("Ns", "#e0234e");
+const MongodbIcon = createTextIcon("DB", "#47a248");
+const CIcon = createTextIcon("C", "#00599c");
+const CppIcon = createTextIcon("C++", "#004482");
+const HtmlIcon = createTextIcon("H5", "#e34f26");
+const JavascriptIcon = createTextIcon("JS", "#f7df1e", "#000000");
+const JqueryIcon = createTextIcon("jQ", "#0769ad");
+const CursorIcon = createTextIcon("Cu", "#111111");
+const CodexIcon = createTextIcon("Cx", "#111827");
+const ClaudeCodeIcon = createTextIcon("Cl", "#d97757");
 
 export const DATA = {
   name: "Ravi Kant",
@@ -25,17 +52,25 @@ export const DATA = {
     "I’m a software developer with 2+ years of experience building production-grade applications, primarily in fintech. In the past, [I earned a Master’s degree in Data Science & Artificial Intelligence](/#education), [worked on large-scale fintech platforms at Value Research](/#work), and [built API-driven systems using PHP, Laravel, NestJS, and Node.js](/#skills). I’ve also transitioned into modern frontend development using [Next.js and Strapi](/#work), while continuously sharpening my backend, database, and DevOps skills.",
   avatarUrl: "/me.jpeg",
   skills: [
+    { name: "Laravel", icon: LaravelIcon },
+    { name: "PHP", icon: PhpIcon },
+    { name: "NextJs", icon: NextjsIconDark },
     { name: "React", icon: ReactLight },
-    { name: "Next.js", icon: NextjsIconDark },
     { name: "Typescript", icon: Typescript },
-    { name: "Node.js", icon: Nodejs },
-    { name: "Python", icon: Python },
-    { name: "Go", icon: Golang },
+    { name: "NodeJs", icon: Nodejs },
+    { name: "NestJs", icon: NestjsIcon },
     { name: "Postgres", icon: Postgresql },
+    { name: "mongodb", icon: MongodbIcon },
     { name: "Docker", icon: Docker },
-    { name: "Kubernetes", icon: Kubernetes },
-    { name: "Java", icon: Java },
-    { name: "C#", icon: Csharp },
+    { name: "github", icon: Icons.github },
+    { name: "c", icon: CIcon },
+    { name: "c++", icon: CppIcon },
+    { name: "HTML", icon: HtmlIcon },
+    { name: "Javscript", icon: JavascriptIcon },
+    { name: "Jquery", icon: JqueryIcon },
+    { name: "Cursor", icon: CursorIcon },
+    { name: "Codex", icon: CodexIcon },
+    { name: "Claude code", icon: ClaudeCodeIcon },
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -131,6 +166,30 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "Pickly",
+      href: "https://pickly-xi.vercel.app/", // replace if different
+      dates: "2026",
+      active: true,
+      description:
+        "Building a shared home for practical farming knowledge. We are focused on making farming knowledge and access easy, centralized, and useful in day-to-day field work. Pickly helps farmers and teams discover crop information quickly and use simple tools that support better decisions.",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Drizzle ORM",
+        "Better Auth",
+        "Tan Stack Qury"
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://pickly-xi.vercel.app/", // or GitHub if repo-only
+          icon: <Icons.globe className="size-3" />,
+        }
+      ],
+      image: "/pickly-image.png",
+      video: "",
+    },
+    {
       title: "VoiceFlow",
       href: "https://copyzen.vercel.app", // replace if different
       dates: "2026",
@@ -158,30 +217,6 @@ export const DATA = {
         },
       ],
       image: "/copyzen.png",
-      video: "",
-    }, 
-    {
-      title: "Pickly",
-      href: "https://pickly-xi.vercel.app/", // replace if different
-      dates: "2026",
-      active: true,
-      description:
-        "Building a shared home for practical farming knowledge. We are focused on making farming knowledge and access easy, centralized, and useful in day-to-day field work. Pickly helps farmers and teams discover crop information quickly and use simple tools that support better decisions.",
-      technologies: [
-        "Next.js",
-        "TypeScript",
-        "Drizzle ORM",
-        "Better Auth",
-        "Tan Stack Qury"
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://pickly-xi.vercel.app/", // or GitHub if repo-only
-          icon: <Icons.globe className="size-3" />,
-        }
-      ],
-      image: "/pickly-image.png",
       video: "",
     }
   ]

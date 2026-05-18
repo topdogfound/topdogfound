@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import BlurFade from "@/components/magicui/blur-fade";
-import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
@@ -9,41 +8,52 @@ import ContactSection from "@/components/section/contact-section";
 import ProjectsSection from "@/components/section/projects-section";
 import WorkSection from "@/components/section/work-section";
 import { ArrowUpRight } from "lucide-react";
+import Text3DFlip from "@/components/ui/text-3d-flip";
+import { KineticText } from "@/components/ui/kinetic-text";
+import { CoolMode } from "@/components/ui/cool-mode";
 
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
   return (
     <main className="min-h-dvh flex flex-col gap-14 relative">
-      <section id="hero">
+      <section id="hero" className="relative z-10">
         <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 gap-y-6 flex flex-col md:flex-row justify-between">
             <div className="gap-2 flex flex-col order-2 md:order-1">
-              <BlurFadeText
-                delay={BLUR_FADE_DELAY}
-                className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl"
-                yOffset={8}
-                text={`Hi, I'm ${DATA.name.split(" ")[0]}`}
-              />
-              <BlurFadeText
-                className="text-muted-foreground max-w-[600px] md:text-lg lg:text-xl"
-                delay={BLUR_FADE_DELAY}
-                text={DATA.description}
-              />
+              <BlurFade delay={BLUR_FADE_DELAY} yOffset={8}>
+                <KineticText
+                  as="h1"
+                  text={`Hi, I'm ${DATA.name.split(" ")[0]}`}
+                  className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl"
+                />
+              </BlurFade>
+              <BlurFade delay={BLUR_FADE_DELAY}>
+                <p className="text-muted-foreground max-w-[600px] md:text-lg lg:text-xl">
+                  Software Developer building scalable, real-world products
+                  across backend and frontend. Very active on github.
+                </p>
+              </BlurFade>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY} className="order-1 md:order-2">
-              <Avatar className="size-24 md:size-32 border rounded-full shadow-lg ring-4 ring-muted">
-                <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
-                <AvatarFallback>{DATA.initials}</AvatarFallback>
-              </Avatar>
+              <CoolMode options={{ particle: "circle", size: 18 }}>
+                <span className="inline-flex cursor-pointer rounded-full">
+                  <Avatar className="size-24 md:size-32 border rounded-full shadow-lg ring-4 ring-muted">
+                    <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
+                    <AvatarFallback>{DATA.initials}</AvatarFallback>
+                  </Avatar>
+                </span>
+              </CoolMode>
             </BlurFade>
           </div>
         </div>
       </section>
-      <section id="about">
+      <section id="about" className="relative z-10">
         <div className="flex min-h-0 flex-col gap-y-4">
           <BlurFade delay={BLUR_FADE_DELAY * 3}>
-            <h2 className="text-xl font-bold">About</h2>
+            <Text3DFlip as="h2" className="text-xl font-bold w-fit">
+              About
+            </Text3DFlip>
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 4}>
             <div className="prose max-w-full text-pretty font-sans leading-relaxed text-muted-foreground dark:prose-invert text-justify">
@@ -54,20 +64,24 @@ export default function Page() {
           </BlurFade>
         </div>
       </section>
-      <section id="work">
+      <section id="work" className="relative z-10">
         <div className="flex min-h-0 flex-col gap-y-6">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
-            <h2 className="text-xl font-bold">Work Experience</h2>
+            <Text3DFlip as="h2" className="text-xl font-bold w-fit">
+              Work Experience
+            </Text3DFlip>
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 6}>
             <WorkSection />
           </BlurFade>
         </div>
       </section>
-      <section id="education">
+      <section id="education" className="relative z-10">
         <div className="flex min-h-0 flex-col gap-y-6">
           <BlurFade delay={BLUR_FADE_DELAY * 7}>
-            <h2 className="text-xl font-bold">Education</h2>
+            <Text3DFlip as="h2" className="text-xl font-bold w-fit">
+              Education
+            </Text3DFlip>
           </BlurFade>
           <div className="flex flex-col gap-8">
             {DATA.education.map((education, index) => (
@@ -112,29 +126,31 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section id="skills">
+      <section id="skills" className="relative z-10">
         <div className="flex min-h-0 flex-col gap-y-4">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
-            <h2 className="text-xl font-bold">Skills</h2>
+            <Text3DFlip as="h2" className="text-xl font-bold w-fit mx-auto sm:mx-0">
+              Skills
+            </Text3DFlip>
           </BlurFade>
-          <div className="flex flex-wrap gap-2 md:gap-5">
+          <div className="grid grid-cols-2 gap-2 sm:flex sm:flex-wrap sm:justify-center md:gap-5">
             {DATA.skills.map((skill, id) => (
               <BlurFade key={skill.name} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                <div className="border bg-background border-border ring-2 ring-border/20 rounded-xl h-8 w-fit px-4 flex items-center gap-2">
+                <div className="border bg-background border-border ring-2 ring-border/20 rounded-xl h-9 w-full px-3 flex items-center justify-start gap-2 sm:h-8 sm:w-fit sm:px-4">
                   {skill.icon && <skill.icon className="size-4 rounded overflow-hidden object-contain" />}
-                  <span className="text-foreground text-sm font-medium">{skill.name}</span>
+                  <span className="min-w-0 truncate text-foreground text-sm font-medium">{skill.name}</span>
                 </div>
               </BlurFade>
             ))}
           </div>
         </div>
       </section>
-      <section id="projects">
+      <section id="projects" className="relative z-10">
         <BlurFade delay={BLUR_FADE_DELAY * 11}>
           <ProjectsSection />
         </BlurFade>
       </section>
-      <section id="contact">
+      <section id="contact" className="relative z-10">
         <BlurFade delay={BLUR_FADE_DELAY * 16}>
           <ContactSection />
         </BlurFade>

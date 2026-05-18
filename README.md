@@ -2,15 +2,14 @@
 <h3 align="center">Software Developer</h3>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Laravel-red?style=flat&logo=laravel&logoColor=white" />
-  <img src="https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white" />
-  <img src="https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black" />
-  <img src="https://img.shields.io/badge/PostgreSQL-336791?style=flat&logo=postgresql&logoColor=white" />
-  <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white" />
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white" />
-  <img src="https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black" />
-  <img src="https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white" />
+  <img src="https://img.shields.io/badge/Laravel-red?style=flat&logo=laravel&logoColor=white" />&nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/NextJs-000000?style=flat&logo=next.js&logoColor=white" />&nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/NodeJs-339933?style=flat&logo=node.js&logoColor=white" />&nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/NestJs-E0234E?style=flat&logo=nestjs&logoColor=white" />&nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/Postgres-336791?style=flat&logo=postgresql&logoColor=white" />&nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/mongodb-47A248?style=flat&logo=mongodb&logoColor=white" />&nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white" />&nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/github-181717?style=flat&logo=github&logoColor=white" />&nbsp;&nbsp;
 </p>
 
 ---
@@ -24,8 +23,10 @@
 
 ### 🛠 Tech
 
-Laravel • PHP • Node.js • JavaScript • PostgreSQL • MongoDB
-Docker • Git • Linux • React • Next.js • NestJS
+Laravel • PHP • NextJs • React • Typescript • NodeJs • NestJs • Postgres • mongodb
+Docker • github • c • c++ • HTML • Javscript • Jquery • Cursor • Codex • Claude code
+
+
 
 ---
 

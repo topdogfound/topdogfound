@@ -82,6 +82,7 @@ export function extractHeadings(markdown: string): BlogHeading[] {
 }
 
 const CATEGORY_RULES: Array<{ label: string; includes: string[] }> = [
+  { label: "Agri", includes: ['fruit', 'farmer', 'soil', 'vegetable', 'crop']},
   { label: "Tech", includes: ["tech", "system", "debug", "coding", "ai", "security", "go", "open-source", "product", "documentation"] },
   { label: "Life", includes: ["life", "career", "fitness", "financial", "clarity", "deep-work"] },
   { label: "Geopolitics", includes: ["geopolitics", "policy", "india", "news"] },
