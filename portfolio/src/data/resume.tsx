@@ -9,23 +9,26 @@ import { Postgresql } from "@/components/ui/svgs/postgresql";
 import { Docker } from "@/components/ui/svgs/docker";
 
 const createTextIcon =
-  (label: string, fill: string, textFill = "#ffffff") =>
-  (props: React.SVGProps<SVGSVGElement>) => (
-    <svg viewBox="0 0 24 24" role="img" aria-label={label} {...props}>
-      <rect width="24" height="24" rx="5" fill={fill} />
-      <text
-        x="12"
-        y="15"
-        textAnchor="middle"
-        fill={textFill}
-        fontSize="8"
-        fontWeight="700"
-        fontFamily="Arial, sans-serif"
-      >
-        {label}
-      </text>
-    </svg>
-  );
+  (label: string, fill: string, textFill = "#ffffff") => {
+    const TextIcon = (props: React.SVGProps<SVGSVGElement>) => (
+      <svg viewBox="0 0 24 24" role="img" aria-label={label} {...props}>
+        <rect width="24" height="24" rx="5" fill={fill} />
+        <text
+          x="12"
+          y="15"
+          textAnchor="middle"
+          fill={textFill}
+          fontSize="8"
+          fontWeight="700"
+          fontFamily="Arial, sans-serif"
+        >
+          {label}
+        </text>
+      </svg>
+    );
+    TextIcon.displayName = `${label.replace(/\W+/g, "")}Icon`;
+    return TextIcon;
+  };
 
 const LaravelIcon = createTextIcon("Lv", "#ff2d20");
 const PhpIcon = createTextIcon("PHP", "#777bb4");

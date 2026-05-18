@@ -200,6 +200,13 @@ const applyParticleEffect = (
   let lastParticleTimestamp = 0
   const particleGenerationDelay = 30
 
+  function stopLoopIfIdle() {
+    if (animationFrame && particles.length === 0 && !autoAddParticle) {
+      cancelAnimationFrame(animationFrame)
+      animationFrame = undefined
+    }
+  }
+
   function loop() {
     const currentTime = performance.now()
     if (
@@ -212,10 +219,18 @@ const applyParticleEffect = (
     }
 
     refreshParticles()
+    if (particles.length === 0 && !autoAddParticle) {
+      animationFrame = undefined
+      return
+    }
     animationFrame = requestAnimationFrame(loop)
   }
 
-  loop()
+  function startLoop() {
+    if (!animationFrame) {
+      animationFrame = requestAnimationFrame(loop)
+    }
+  }
 
   const isTouchInteraction = "ontouchstart" in window
 
@@ -236,10 +251,12 @@ const applyParticleEffect = (
   const tapHandler = (e: MouseEvent | TouchEvent) => {
     updateMousePosition(e)
     autoAddParticle = true
+    startLoop()
   }
 
   const disableAutoAddParticle = () => {
     autoAddParticle = false
+    stopLoopIfIdle()
   }
 
   element.addEventListener(move, updateMousePosition, { passive: true })
@@ -256,8 +273,7 @@ const applyParticleEffect = (
     element.removeEventListener("mouseleave", disableAutoAddParticle)
 
     const interval = setInterval(() => {
-      if (animationFrame && particles.length === 0) {
-        cancelAnimationFrame(animationFrame)
+      if (!animationFrame && particles.length === 0) {
         clearInterval(interval)
 
         if (--instanceCounter === 0) {

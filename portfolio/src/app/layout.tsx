@@ -70,14 +70,13 @@ export default function RootLayout({
           geistMono.variable
         )}
       >
-        <ThemeProvider attribute="class" defaultTheme="light">
+        <ThemeProvider defaultTheme="light">
           <TooltipProvider delayDuration={0}>
             <div className="fixed inset-0 z-0 overflow-hidden">
               <DotPattern
                 width={22}
                 height={22}
                 cr={0.9}
-                glow
                 className="text-neutral-300/70 dark:text-neutral-700/70 [mask-image:radial-gradient(ellipse_at_top,white,transparent_78%)]"
               />
             </div>

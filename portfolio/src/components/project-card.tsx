@@ -1,9 +1,9 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import Markdown from "react-markdown";
@@ -16,10 +16,12 @@ function ProjectImage({ src, alt }: { src: string; alt: string }) {
   }
 
   return (
-    <img
+    <Image
       src={src}
       alt={alt}
-      className="w-full h-48 object-cover"
+      fill
+      sizes="(max-width: 640px) 100vw, 400px"
+      className="object-cover"
       onError={() => setImageError(true)}
     />
   );
@@ -68,8 +70,8 @@ export function ProjectCard({
           rel="noopener noreferrer"
           className="block"
         >
-          {video ? (
-            <video
+              {video ? (
+                <video
               src={video}
               autoPlay
               loop
@@ -77,8 +79,10 @@ export function ProjectCard({
               playsInline
               className="w-full h-48 object-cover"
             />
-          ) : image ? (
-            <ProjectImage src={image} alt={title} />
+              ) : image ? (
+                <div className="relative h-48 w-full">
+                  <ProjectImage src={image} alt={title} />
+                </div>
           ) : (
             <div className="w-full h-48 bg-muted" />
           )}

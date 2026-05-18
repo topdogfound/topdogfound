@@ -87,5 +87,5 @@ function extractHeadings(markdown: string) {
 }
 
 export default defineConfig({
-    collections: [posts],
+    content: [posts],
 });

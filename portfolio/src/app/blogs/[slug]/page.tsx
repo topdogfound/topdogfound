@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
 import { notFound } from "next/navigation";
 import { allPosts } from "content-collections";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -122,9 +123,9 @@ export default async function BlogDetailsPage({
       id="blog-details"
       className="space-y-8 relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen px-6 sm:px-10 lg:px-14 xl:px-20"
     >
-      <script
+      <Script
+        id={`blog-json-ld-${slug}`}
         type="application/ld+json"
-        suppressHydrationWarning
         dangerouslySetInnerHTML={{ __html: jsonLdContent }}
       />
 
