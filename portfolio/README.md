@@ -1,47 +1,107 @@
-<div align="center">
-<img alt="Portfolio" src="https://github.com/dillionverma/portfolio/assets/16860528/57ffca81-3f0a-4425-b31d-094f61725455" width="90%">
-</div>
+# Portfolio
 
-# Portfolio [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fdillionverma%2Fportfolio)
+A personal portfolio and blog built with Next.js, React, TypeScript, Tailwind CSS, shadcn/ui, Magic UI, and MDX content collections.
 
-Built with next.js, [shadcn/ui](https://ui.shadcn.com/), and [magic ui](https://magicui.design/), deployed on Vercel.
+## Features
 
-# Features
+- Resume-driven portfolio content from a single config file
+- Blog support with MDX
+- Responsive layout
+- Dark mode support
+- Project, work, education, skills, and contact sections
+- Optimized for deployment on Vercel
 
-- Setup only takes a few minutes by editing the [single config file](./src/data/resume.tsx)
-- Built using Next.js 14, React, Typescript, Shadcn/UI, TailwindCSS, Framer Motion, Magic UI
-- Includes a blog
-- Responsive for different devices
-- Optimized for Next.js and Vercel
+## Tech Stack
 
-# Getting Started Locally
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS 4
+- shadcn/ui
+- Magic UI
+- Motion
+- Content Collections
+- MDX
 
-1. Clone this repository to your local machine:
+## Getting Started
 
-   ```bash
-   git clone https://github.com/dillionverma/portfolio
-   ```
+Install dependencies:
 
-2. Move to the cloned directory
+```bash
+pnpm install
+```
 
-   ```bash
-   cd portfolio
-   ```
+Start the development server:
 
-3. Install dependencies:
+```bash
+pnpm dev
+```
 
-   ```bash
-   pnpm install
-   ```
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-4. Start the local Server:
+## Customize
 
-   ```bash
-   pnpm dev
-   ```
+Update the main portfolio content in:
 
-5. Open the [Config file](./src/data/resume.tsx) and make changes
+```bash
+src/data/resume.tsx
+```
 
-# License
+This file controls the name, bio, location, social links, work experience, education, skills, and projects shown on the site.
 
-Licensed under the [MIT license](https://github.com/dillionverma/portfolio/blob/main/LICENSE.md).
+Add or edit blog posts in:
+
+```bash
+content
+```
+
+Static assets such as profile images, company logos, and project images live in:
+
+```bash
+public
+```
+
+## Available Scripts
+
+Run the development server:
+
+```bash
+pnpm dev
+```
+
+Create a production build:
+
+```bash
+pnpm build
+```
+
+Start the production server:
+
+```bash
+pnpm start
+```
+
+Run linting:
+
+```bash
+pnpm lint
+```
+
+Fix lint issues:
+
+```bash
+pnpm lint:fix
+```
+
+## Deploy
+
+The easiest way to deploy this project is with Vercel.
+
+1. Push the project to GitHub.
+2. Import the repository in Vercel.
+3. Use the default Next.js settings.
+4. Deploy.
+
+## License
+
+Licensed under the [MIT license](./LICENSE).
