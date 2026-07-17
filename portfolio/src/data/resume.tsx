@@ -34,6 +34,9 @@ const LaravelIcon = createTextIcon("Lv", "#ff2d20");
 const PhpIcon = createTextIcon("PHP", "#777bb4");
 const NestjsIcon = createTextIcon("Ns", "#e0234e");
 const MongodbIcon = createTextIcon("DB", "#47a248");
+const MysqlIcon = createTextIcon("SQL", "#4479a1");
+const RedisIcon = createTextIcon("R", "#dc382d");
+const StrapiIcon = createTextIcon("St", "#4945ff");
 const CIcon = createTextIcon("C", "#00599c");
 const CppIcon = createTextIcon("C++", "#004482");
 const HtmlIcon = createTextIcon("H5", "#e34f26");
@@ -42,6 +45,7 @@ const JqueryIcon = createTextIcon("jQ", "#0769ad");
 const CursorIcon = createTextIcon("Cu", "#111111");
 const CodexIcon = createTextIcon("Cx", "#111827");
 const ClaudeCodeIcon = createTextIcon("Cl", "#d97757");
+const CopilotIcon = createTextIcon("Co", "#24292f");
 
 export const DATA = {
   name: "Ravi Kant",
@@ -50,9 +54,9 @@ export const DATA = {
   location: "Rohru, Shimla, Himachal Pradesh, India",
   locationLink: "https://www.google.com/maps/place/Rohru,+Himachal+Pradesh",
   description:
-    "Software Developer building scalable, real-world products across backend and frontend. Very active on github.",
+    "Full-Stack PHP Software Engineer building production-grade backend and frontend applications.",
   summary:
-    "I’m a software developer with 2+ years of experience building production-grade applications, primarily in fintech. In the past, [I earned a Master’s degree in Data Science & Artificial Intelligence](/#education), [worked on large-scale fintech platforms at Value Research](/#work), and [built API-driven systems using PHP, Laravel, NestJS, and Node.js](/#skills). I’ve also transitioned into modern frontend development using [Next.js and Strapi](/#work), while continuously sharpening my backend, database, and DevOps skills.",
+    "I’m a Full-Stack PHP Software Engineer with 3+ years of experience building production-grade applications using PHP, Laravel, React, Next.js, and PostgreSQL. I specialize in REST APIs, third-party integrations, database optimization, microservices, and CI/CD. I also use AI-assisted development tools for debugging, documentation, test generation, and technical research while validating generated code for quality and security.",
   avatarUrl: "/me.jpeg",
   skills: [
     { name: "Laravel", icon: LaravelIcon },
@@ -63,17 +67,21 @@ export const DATA = {
     { name: "NodeJs", icon: Nodejs },
     { name: "NestJs", icon: NestjsIcon },
     { name: "Postgres", icon: Postgresql },
-    { name: "mongodb", icon: MongodbIcon },
+    { name: "MongoDB", icon: MongodbIcon },
+    { name: "MySQL", icon: MysqlIcon },
+    { name: "Redis", icon: RedisIcon },
+    { name: "Strapi", icon: StrapiIcon },
     { name: "Docker", icon: Docker },
-    { name: "github", icon: Icons.github },
+    { name: "GitHub", icon: Icons.github },
     { name: "c", icon: CIcon },
     { name: "c++", icon: CppIcon },
     { name: "HTML", icon: HtmlIcon },
-    { name: "Javscript", icon: JavascriptIcon },
-    { name: "Jquery", icon: JqueryIcon },
+    { name: "JavaScript", icon: JavascriptIcon },
+    { name: "jQuery", icon: JqueryIcon },
     { name: "Cursor", icon: CursorIcon },
     { name: "Codex", icon: CodexIcon },
     { name: "Claude code", icon: ClaudeCodeIcon },
+    { name: "GitHub Copilot", icon: CopilotIcon },
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -123,33 +131,43 @@ export const DATA = {
     {
       company: "Value Research (Contract)",
       href: "https://www.valueresearchonline.com",
-      badges: ["Next.js", "Strapi", "JavaScript", "HTML", "CSS"],
-      location: "Noida, India",
+      badges: [
+        "Laravel",
+        "Next.js",
+        "React",
+        "Strapi",
+        "Core PHP",
+        "Finvu APIs",
+        "PyHanko",
+        "Camunda",
+        "Microservices",
+      ],
+      location: "Noida, India · Remote · Fixed-term contract",
       title: "Software Developer",
       logoUrl: "/valueresearch.jpg",
       start: "January 2026",
-      end: "Present",
+      end: "July 2026",
       description:
-        "Transitioned to frontend development to deliver content-driven features using Strapi CMS and Next.js. Worked closely with backend and product teams to integrate APIs, align UI components with business logic, and ship features under tight deadlines.",
+        "Rejoined Value Research on a fixed-term contract, contributing to frontend features, SDK development, and microservices. Built content-driven features using Next.js and Strapi, developed a reusable React-based Finvu Account Aggregator SDK and integrated it with a Core PHP application, created a Laravel digital-signature microservice using PyHanko, and supported Camunda-based workflow orchestration.",
     },
     {
       company: "Value Research",
       href: "https://www.valueresearchonline.com",
       badges: ["PHP", "Laravel", "PostgreSQL", "REST APIs", "Fintech"],
-      location: "Noida, India",
+      location: "Noida, India · On-site",
       title: "Software Developer",
       logoUrl: "/valueresearch.jpg",
       start: "April 2023",
       end: "August 2025",
       description:
-        "Built and maintained transaction-heavy fintech systems. Migrated 10,000+ paid users to a new platform with full data integrity. Developed core investment features including Buy, Sell, Switch, and SIP by integrating BSE APIs and webhooks. Implemented KYC onboarding via DIGIO and BSE APIs, built a risk assessment engine, optimized mutual fund file parsing (CAMS, Karvy) reducing processing time by 50%, and collaborated in an Agile setup.",
+        "Migrated 10,000+ paid users from Premium to the Fund Advisor platform with 100% data integrity and seamless onboarding. Developed Buy, Sell, Switch, and SIP features using BSE APIs and webhooks, achieving a 99.9% transaction success rate. Implemented compliant KYC onboarding through DIGIO and BSE APIs, built a questionnaire-based risk assessment system, and optimized CAMS and Karvy MFC file parsing to reduce processing time by 50%.",
     },
     {
       company: "CodeQuotient",
       href: "https://codequotient.com",
       badges: ["Node.js", "Express", "MongoDB", "MySQL", "WebSocket"],
-      location: "Mohali, India",
-      title: "Software Developer Trainee",
+      location: "Mohali, India · On-site",
+      title: "Software Developer - Training Program",
       logoUrl: "/codequotient.jpeg",
       start: "December 2022",
       end: "March 2023",
